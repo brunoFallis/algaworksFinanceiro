@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:h="http://xmlns.jcp.org/jsf/html"
+	  xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+
+	<title>Livros JSF</title>
+
+</h:head>
+
+<h:body>
+	<h:outputStylesheet library="algaworks" name="estilo.css"/>
+	<h:outputScript library="algaworks" name="script.js"/>
+
+	<h:form>
+		
+		<h:panelGrid columns="2">
+		
+			<h:inputText value="#{livro.novoLivro.titulo}" binding="#{livro.titulo}"/>
+			
+			<h:inputText value="#{livro.novoLivro.autor}" binding="#{livro.autor}"/>
+		
+			<h:commandButton value="Adicionar" action="#{livro.adicionar}"/>
+		
+		</h:panelGrid>
+		
+		<h:dataTable value="#{livro.livros}" var="l" border="1" cellspacing="0" cellpadding="2">
+		
+			<f:facet name="header">
+				Tabela de livros
+			</f:facet>
+			
+			<h:column>
+				<f:facet name="header">Titulo</f:facet>
+				<h:outputText value="#{l.titulo}"/>
+			</h:column>
+		
+			<h:column>
+				<f:facet name="header">Autor</f:facet>
+				<h:outputText value="#{l.autor}"/>
+			</h:column>
+			
+			<h:column>
+				<f:facet name="header">Autor</f:facet>
+				<h:commandButton value="excluir" action="#{livro.excluir(l)}"/>
+				<h:commandButton value="alterar" action="#{livro.alterar(l)}"/>
+			</h:column>
+		
+		</h:dataTable>
+
+	</h:form>
+
+</h:body>
+
+</html>

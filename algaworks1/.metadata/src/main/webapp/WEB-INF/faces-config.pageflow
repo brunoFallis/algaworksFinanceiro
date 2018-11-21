@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf15422110760930" configfile="/algaworks1/src/main/webapp/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="*" id="pf15422111552544" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf15422111552545" path="*"/>
+  <nodes xsi:type="pageflow:PFPage" name="ola.xhtml" id="pf15422111552546" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf15422111552545" path="/ola.xhtml"/>
+  <links id="pf15422111552545" target="pf15422111552546" source="pf15422111552544" outcome="teste" redirect="true"/>
+</pageflow:Pageflow>
